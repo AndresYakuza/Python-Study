@@ -1,16 +1,14 @@
+income = float(input("Introduce el ingreso anual: "))
 
-num1 = int(input("Digite el primer numero: "))
+if income <= 85528:
+    tax = income * 0.18 - 556.02
+else:
+    tax = 14839.02 + (income - 85528) * 0.32
 
-num2 = int(input("Digite el segundo numero: "))
+if tax < 0.0:
+    tax = 0.0  # No puede ser negativo
 
-num3 = int(input("Digite el tercer numero: "))
+tax = round(tax, 0)
+print("El impuesto es:", tax, "pesos")
 
-nummax = num1
 
-if num2	> nummax:
-    nummax = num2
-
-if num3 > nummax:
-    nummax = num3
-
-print('El numero mayor es:', nummax)
