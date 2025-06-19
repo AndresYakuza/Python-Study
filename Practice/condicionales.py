@@ -86,3 +86,129 @@ if year > 1582:
             print('Es un año bisiesto.')
 else:
     print("No esta dentro del período del calendario Gregoriano")
+
+
+
+#######################################################
+
+# 🔸 Ejercicio 1: Edad para votar
+# Pide al usuario su edad e imprime:
+# "Puedes votar" si tiene 18 años o más.
+# "No puedes votar" si es menor de 18.
+
+edad = int(input('Por favor digite su edad: '))
+
+if edad >= 18:
+    print('Puedes votar.')
+else:
+    print('No puede votar.')
+
+# 🔸 Ejercicio 2: Número par o impar
+# Pide un número entero y muestra si es "Par" o "Impar".
+
+numero = int(input('Por favor digite el numero: '))
+
+if numero % 2 == 0:
+    print('El número es par.')
+else:
+    print('El número es impar.')
+
+
+# 🔸 Ejercicio 3: Clasificación de nota
+# Pide una nota del 0 al 10. Según la nota, muestra:
+
+# "Sobresaliente" si es 9 o 10.
+
+# "Notable" si es 7 u 8.
+
+# "Aprobado" si es 5 o 6.
+
+# "Suspenso" si es menor de 5.
+
+
+nota = int(input('Digite por favor la nota en el rango de 0 a 10: '))
+
+if nota >= 0 or nota <= 10: # Correcion if 0 <= nota <= 10:
+    if nota < 5:
+        print('Suspenso')
+    elif nota == 5 or nota == 6:
+        print('Aprobado')
+    elif nota == 7 or nota == 8:
+        print('Notable')
+    else:
+        print('Sobresaliente')
+else:
+    print('Nota no valida.')
+
+
+# 🔸 Ejercicio 4: Calculadora simple
+# Pide dos números y una operación (+, -, *, /). Muestra el resultado.
+
+n1 = int(input('Digite el primer valor: '))
+n2 = int(input('Digite el segundo valor: '))
+ope = int(input('Digite el numero de la operacion a realizar... (1)Suma (2)Resta (3)Multiplicacion (4)División'))
+
+if ope == 1:
+    print('Usted ha seleccionado suma.')
+    print('El resultado de su suma es:', n1 + n2)
+elif ope == 2:
+    print('Usted ha seleccionado resta.')
+    print('El resultado de la resta es:', n1 - n2)
+elif ope == 3:
+    print('Usted ha seleccionado multiplicacion.')
+    print('El resultado de su multiplicacion es:', n1 * n2)
+elif ope == 4:
+    print('Usted ha seleccionado división')
+    print('El resultado de su division es:', n1 / n2)
+else:
+    print('Opción no valida.')
+
+# 🔸 Ejercicio 5: Año bisiesto (repetición del que hiciste, sin aviso del calendario Gregoriano)
+
+year = int(input("Introduce un año: "))
+
+if year % 4 != 0:
+    print('Es un año común.')
+elif year % 100 != 0:
+    print('Es un año bisiesto.')
+elif year % 400 != 0:
+    print('Es un año común.')
+else:
+    print('Es un año bisiesto.')
+
+# 🔸 Ejercicio 6: Contraseña segura
+# Define una contraseña en tu código (por ejemplo: "python2025").
+# Pide al usuario que introduzca la contraseña.
+# Si es correcta, imprime "Acceso concedido", si no, "Contraseña incorrecta".
+
+contrasena = input('Por favor digite la contrasena: ')
+
+if contrasena == 'python2025': # Detalle -- if contrasena.lower() == 'python2025':
+    print('Acceso concedido')
+else:
+    print('Acceso denegado.')
+
+# 🔸 Ejercicio 7: Mayor de tres números
+# Pide tres números al usuario e imprime cuál es el mayor.
+
+nu1 = int(input('Digite el primer numero: '))
+nu2 = int(input('Digite el segundo numero: '))
+nu3 = int(input('Digite el tercer numero: '))
+
+numayor = 1 # Detalle -- n1
+
+if numayor > nu2:
+    numayor = nu2
+
+if numayor > nu3:
+    numayor = nu3
+
+print('El numero mayor es:', numayor)
+
+
+
+
+
+
+
+
