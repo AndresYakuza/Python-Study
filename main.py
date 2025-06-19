@@ -1,14 +1,15 @@
-income = float(input("Introduce el ingreso anual: "))
+year = int(input("Introduce un año: "))
 
-if income <= 85528:
-    tax = income * 0.18 - 556.02
+if year > 1582:
+        if year % 4 != 0:
+            print('Es un año común.')
+        elif year % 100 != 0:
+            print('Es un año bisiesto.')
+        elif year % 400 != 0:
+            print('Es un año común.')
+        else:
+            print('Es un año bisiesto.')
 else:
-    tax = 14839.02 + (income - 85528) * 0.32
-
-if tax < 0.0:
-    tax = 0.0  # No puede ser negativo
-
-tax = round(tax, 0)
-print("El impuesto es:", tax, "pesos")
+    print("No está dentro del período del calendario Gregoriano")
 
 
