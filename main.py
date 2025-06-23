@@ -1,15 +1,14 @@
-year = int(input("Introduce un año: "))
+#  🔸 Ejercicio 3: Pide un número al usuario e indica si:
+# Es positivo
+# Es negativo
+# Es cero
 
-if year > 1582:
-        if year % 4 != 0:
-            print('Es un año común.')
-        elif year % 100 != 0:
-            print('Es un año bisiesto.')
-        elif year % 400 != 0:
-            print('Es un año común.')
-        else:
-            print('Es un año bisiesto.')
+
+valor1 = float(input('Valor numerico: '))
+
+if valor1 < 0:
+    print('Negativo')
+elif valor1 == 0:
+    print('Es cero')
 else:
-    print("No está dentro del período del calendario Gregoriano")
-
-
+    print('Positivo')

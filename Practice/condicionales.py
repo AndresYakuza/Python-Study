@@ -206,6 +206,112 @@ if numayor > nu3:
 print('El numero mayor es:', numayor)
 
 
+#########################################################
+
+# 🔸 Ejercicio 1: Calculadora avanzada
+# Pide dos números y la operación que desea realizar:
+
+# Suma
+# Resta
+# Multiplicación
+# División
+# Potencia
+# Módulo (resto de la división)
+
+# El usuario puede elegir escribiendo el nombre de la operación (por ejemplo: "suma"). 
+# Muestra el resultado. Si la operación no es válida, muestra un mensaje de error.
+
+
+nume1 = int(input('Numero 1: '))
+nume2 = int(input('Numero 2: '))
+print('Por favor digitar el nombre de la operacion tal como se muestra en el enunciado.')
+opera = input('Operacion a realizar: Suma, Resta, Multiplicación, División, Potencia, Módulo: ')
+
+if opera.lower() == 'suma':
+    print('Usted ha seleccionado suma.')
+    print('El resultado de su suma es:', nume1 + nume2)
+elif opera.lower() == 'resta':
+    print('Usted ha seleccionado resta.')
+    print('El resultado de la resta es:', nume1 - nume2)
+elif opera.lower() == 'multiplicación':
+    print('Usted ha seleccionado multiplicación.')
+    print('El resultado de su multiplicación es:', nume1 * nume2)
+elif opera.lower() == 'división':
+    print('Usted ha seleccionado división')
+    print('El resultado de su división es:', nume1 / nume2)
+elif opera.lower() == 'potencia':
+    print('Usted ha seleccionado potencia')
+    print('El resultado de su potencia es:', nume1 ** nume2)
+elif opera.lower() == 'módulo':
+    print('Usted ha seleccionado módulo')
+    print('El resultado de su módulo es:', nume1 % nume2)
+else:
+    print(f'Opción no valida. Por favor validar si {opera} es igual a las opciones solicitadas.')
+
+
+#  🔸 Ejercicio 3: Pide un número al usuario e indica si:
+# Es positivo
+# Es negativo
+# Es cero
+
+
+valor1 = float(input('Valor numerico: '))
+
+if valor1 < 0:
+    print('Negativo')
+elif valor1 == 0:
+    print('Es cero')
+else:
+    print('Positivo')
+
+#########################################################
+
+
+# 🔸 Ejercicio 3: Conversor de temperatura
+# El usuario escribe una temperatura y la unidad original (Celsius o Fahrenheit), 
+# y el programa muestra la temperatura convertida a la otra unidad.
+
+# Ejemplo:
+# Si el usuario escribe 32 F, el programa devuelve 0 C.
+# Si escribe 100 C, devuelve 212 F.
+
+
+
+#########################################################
+
+# 🔸 Ejercicio 4: Calculadora de sueldo con impuestos
+# El usuario ingresa su sueldo bruto (antes de impuestos). Según el sueldo:
+
+# Si es menor de 1000, paga 5% de impuestos.
+
+# Entre 1000 y 2000, paga 10%.
+
+# Más de 2000, paga 15%.
+
+# El programa debe calcular y mostrar el sueldo neto (después de impuestos).
+
+
+#########################################################
+
+# 🔸 Ejercicio 5: Año bisiesto y día de la semana
+# Pide al usuario que introduzca un año y un número de día (1 a 365 o 366).
+# Calcula:
+
+# Si es año bisiesto o no.
+
+# Qué día de la semana corresponde (asumiendo que el 1 de enero de ese año es lunes).
+
+# Ejemplo:
+# Si el usuario pone 2024, día 3, diría: "Miércoles".
+
+# (Pista: usar % para rotar entre los días de la semana).
+
+
+
+
+
+
+
 
 
 
