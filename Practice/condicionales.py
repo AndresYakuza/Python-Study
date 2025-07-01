@@ -276,6 +276,17 @@ else:
 # Si escribe 100 C, devuelve 212 F.
 
 
+temperatura = int(input('Digite la temperatura: '))
+unidad = int(input('Digite el número de la unidad: (1)Celsius (2)Fahrenheit...'))
+
+if unidad == 1: 
+    conv = (temperatura * 9 / 5) + 32
+    print('La conversion de Celsius a Fahrenheit es:', conv, 'C')
+else:
+    conv1 = (temperatura - 32) * 5 / 9
+    print('La conversion de Fahrenheit a Celsius es:', conv1, 'F')
+
+
 
 #########################################################
 
@@ -289,6 +300,27 @@ else:
 # Más de 2000, paga 15%.
 
 # El programa debe calcular y mostrar el sueldo neto (después de impuestos).
+
+
+sueldo = int(input('Digite el sueldo bruto: '))
+
+if 0 < sueldo < 1000:
+    impuesto = sueldo * 0.05
+    neto = sueldo - impuesto
+    print(f'El impuesto para el sueldo de {sueldo} es del 5% ({impuesto}), por lo tanto su salio será de {neto}.')
+
+elif 1000 <= sueldo <= 2000:
+    impuesto = sueldo * 0.10
+    neto = sueldo - impuesto
+    print(f'El impuesto para el sueldo de {sueldo} es del 10% ({impuesto}), por lo tanto su salio será de {neto}.')
+
+elif sueldo > 2000: 
+    impuesto = sueldo * 0.15
+    neto = sueldo - impuesto
+    print(f'El impuesto para el sueldo de {sueldo} es del 15% ({impuesto}), por lo tanto su salio será de {neto}.')
+
+else: 
+    print('Valor no valido...')
 
 
 #########################################################
@@ -305,6 +337,35 @@ else:
 # Si el usuario pone 2024, día 3, diría: "Miércoles".
 
 # (Pista: usar % para rotar entre los días de la semana).
+
+year = int(input('Introduzca un año: '))
+dia = int(input('Introduzca un número de día (1 a 365 o 366): '))
+
+# Determinar si es bisiesto
+if year % 4 != 0:
+    es_bisiesto = False
+elif year % 100 != 0:
+    es_bisiesto = True
+elif year % 400 != 0:
+    es_bisiesto = False
+else:
+    es_bisiesto = True
+
+# Mostrar si es bisiesto
+if es_bisiesto:
+    print('Es un año bisiesto.')
+    max_dia = 366
+else:
+    print('Es un año común.')
+    max_dia = 365
+
+# Validar si el día es válido
+if dia < 1 or dia > max_dia:
+    print(f'Error: ese año solo tiene hasta {max_dia} días.')
+else:
+    dias_semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+    indice = (dia - 1) % 7
+    print(f'El día {dia} del año {year} cae en {dias_semana[indice]}.')
 
 
 
