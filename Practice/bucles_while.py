@@ -45,6 +45,14 @@ else:
 # Contador hacia atrás
 # Pide un número y cuenta desde ese número hasta 0.
 
+number = int(input('Digite numero: '))
+
+while number >= 0:
+    print(number, end=' ')
+    number -= 1
+
+print("\nDespegue.")
+
 
 # 🟡 Normales
 # Objetivo: Usar while con condiciones y lógica simple.
