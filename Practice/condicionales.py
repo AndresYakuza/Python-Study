@@ -276,15 +276,17 @@ else:
 # Si escribe 100 C, devuelve 212 F.
 
 
-temperatura = int(input('Digite la temperatura: '))
-unidad = int(input('Digite el número de la unidad: (1)Celsius (2)Fahrenheit...'))
+temperatura = float(input('Digite la temperatura: '))
+unidad = int(input('Digite el número de la unidad: (1) Celsius (2) Fahrenheit: '))
 
 if unidad == 1: 
     conv = (temperatura * 9 / 5) + 32
-    print('La conversion de Celsius a Fahrenheit es:', conv, 'C')
+    print(f'{temperatura} °C son {conv:.2f} °F')
+elif unidad == 2:
+    conv = (temperatura - 32) * 5 / 9
+    print(f'{temperatura} °F son {conv:.2f} °C')
 else:
-    conv1 = (temperatura - 32) * 5 / 9
-    print('La conversion de Fahrenheit a Celsius es:', conv1, 'F')
+    print('Unidad no válida. Use 1 para Celsius o 2 para Fahrenheit.')
 
 
 
