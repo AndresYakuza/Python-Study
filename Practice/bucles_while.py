@@ -53,7 +53,10 @@ while number >= 0:
 
 print("\nDespegue.")
 
-# ====== Adivina el número
+# 🟡 Normales
+# Objetivo: Usar while con condiciones y lógica simple.
+
+# ======== Adivina el número
 # Guarda un número secreto (por ejemplo, 7).
 # El usuario debe adivinarlo. El programa le dice si acertó o no.
 # Usa while hasta que adivine.
@@ -78,20 +81,47 @@ else:
     print('Total de intentos: ', len(intentos))
 
 
-# 🟡 Normales
-# Objetivo: Usar while con condiciones y lógica simple.
-
-# Adivina el número
-# Guarda un número secreto (por ejemplo, 7).
-# El usuario debe adivinarlo. El programa le dice si acertó o no.
-# Usa while hasta que adivine.
-
-# Menú de opciones
+#========= Menú de opciones
 # Muestra un menú en pantalla con opciones:
 # 1. Saludar
 # 2. Decir adiós
 # 3. Salir
 # Repite el menú hasta que el usuario elija salir.
+
+opcion = 0
+
+while opcion != 3:
+        print('# Menú de opciones')
+        print('# 1. Saludar')
+        print('# 2. Decir adiós')
+        print('# 3. Salir')
+
+        try:
+            opcion = int(input('Opción: '))
+            if opcion == 1: 
+                print('=================')
+                print('Hola! Saludos :)')
+                print('=================')
+            elif opcion == 2:
+                print('=================')
+                print('Bye! Regresa pronto :)')
+                print('=================')
+            elif opcion == 3:
+                print('=================')
+                print('Ohh! Saliste exitosamente :)')
+                print('=================')
+            else:
+                print('=================')  
+                print('Error, opción no valida...')
+                print('=================')
+        except ValueError:
+            print('=======================================')  
+            print('Error: debes ingresar un número válido.')
+            print('=======================================')
+# NOTA
+# El bloque try-except se usa para manejar errores en tiempo de ejecución.
+# El código dentro de try se ejecuta normalmente, y si ocurre un error,
+# el bloque except captura la excepción y permite manejarla sin que el programa se detenga.
 
 # Multiplicación hasta acertar
 # Pide dos números, calcula la multiplicación.
