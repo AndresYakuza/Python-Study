@@ -123,10 +123,28 @@ while opcion != 3:
 # El código dentro de try se ejecuta normalmente, y si ocurre un error,
 # el bloque except captura la excepción y permite manejarla sin que el programa se detenga.
 
-# Multiplicación hasta acertar
+# ======== Multiplicación hasta acertar
 # Pide dos números, calcula la multiplicación.
 # Luego pide al usuario que diga el resultado.
 # Repite hasta que acierte.
+
+nu1 = int(input('Ingrese el primer número: '))
+nu2 = int(input('Ingrese el segundo número: '))
+result = nu1 * nu2
+
+user_result = None  # Valor inicial que no puede ser igual al resultado
+
+while user_result != result:
+    user_result = int(input(f'¿Cuánto es {nu1} x {nu2}? '))
+    
+    if user_result == result:
+        print(f'✅ ¡Correcto! {nu1} x {nu2} = {result}')
+    else:
+        print('❌ Incorrecto. Intenta de nuevo...\n')
+
+# Nota
+# None es un objeto especial en Python que representa la ausencia de valor o "nada".
+# Se usa cuando quieres declarar una variable, pero aún no tiene un valor definido.
 
 # 🔴 Difíciles (pero accesibles)
 # Objetivo: Pensar un poco más, usar varias condiciones o más lógica.
