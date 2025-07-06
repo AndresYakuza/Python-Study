@@ -206,8 +206,49 @@ else:
         print(f'Numero mayor: {max(numbers_save)}')
         print(f'Numero menor: {min(numbers_save)}')
     else:
-        print('⚠️ No se ingresaron números válidos.')
+        print('No se ingresaron números válidos.')
 
-# Suma de pares
+# ======== Suma de pares
 # Pide números hasta que el usuario escriba 0.
 # Suma solo los números pares e imprime el total al final.
+
+numbers = None
+numberslist = []
+par = []
+impar = []
+totalpar = 0
+
+while numbers != 0:
+
+    try:
+        numbers =  int(input('(Finalizar digitando (0) Número: '))
+        numberslist.append(numbers)
+
+        if numbers % 2 == 0:
+            par.append(numbers)
+            totalpar += numbers
+        else:
+            impar.append(numbers)
+
+    except ValueError:
+        print('No es un valor numerico...')
+    
+else:
+
+    par.remove(0)
+
+    if numberslist: 
+
+        if par: 
+            print(f'Numeros pares: {par}')
+            print(f'Suma total pares: {totalpar}')
+        else:
+            print('No se encotraron numeros pares')
+        
+        if impar:
+            print(f'Número impares: {impar}')
+        else:
+            print('No se encotraron numeros impares')
+
+    else:
+        print('No se encotraron valores')
