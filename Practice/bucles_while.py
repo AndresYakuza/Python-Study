@@ -179,9 +179,34 @@ while user_password != passwordT:
         print('=======================================')  
 
 
-# Número mayor
+
+# ======= Número mayor
 # Pide números al usuario hasta que escriba -1.
 # Al final muestra cuál fue el número mayor que escribió.
+
+    
+numbers_save = []
+numbers = None
+
+while numbers != -1:
+
+    try: 
+        numbers = int(input('Digite numeros (-1 para romper el siglo...): '))
+        numbers_save.append(numbers)
+
+    except ValueError:
+        print('Error, no es un valor numerico...')
+
+else:
+    numbers_save.remove(-1)
+
+    if numbers_save:
+        print(f'Numeros digitados:{numbers_save}')
+        print(f'Cantidad: {len(numbers_save)}')
+        print(f'Numero mayor: {max(numbers_save)}')
+        print(f'Numero menor: {min(numbers_save)}')
+    else:
+        print('⚠️ No se ingresaron números válidos.')
 
 # Suma de pares
 # Pide números hasta que el usuario escriba 0.
