@@ -149,10 +149,35 @@ while user_result != result:
 # 🔴 Difíciles (pero accesibles)
 # Objetivo: Pensar un poco más, usar varias condiciones o más lógica.
 
-# Validar contraseña
+# ========= Validar contraseña
 # La contraseña correcta es "python123".
 # Pide al usuario que escriba la contraseña.
 # Solo tiene 3 intentos. Si se equivoca 3 veces, muestra "bloqueado".
+
+passwordT = 'python123'
+user_password = None
+tries = 3
+
+while user_password != passwordT:
+    user_password = input('Digite la contraseña por favor: ')
+
+    if user_password != passwordT:
+        if tries > 1:
+            tries -= 1
+            print('=======================================')  
+            print('❌ Incorrecto. Intenta de nuevo...')
+            print(f'Te quedan {tries} intento/s, si llega a 0 procederemos a bloquear...')
+            print('=======================================')  
+        else: 
+            print('=======================================')  
+            print('❌BLOQUEADO❌ Has sobrepasado el numero de intentos...')
+            print('=======================================')  
+            break
+    else:
+        print('=======================================')  
+        print('✅ ¡Correcto!')
+        print('=======================================')  
+
 
 # Número mayor
 # Pide números al usuario hasta que escriba -1.
