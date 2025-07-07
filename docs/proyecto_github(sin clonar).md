@@ -1,3 +1,6 @@
+📁 Pasos para futuros proyectos en GitHub
+Este documento describe paso a paso cómo configurar un nuevo proyecto en GitHub, incluyendo la creación del entorno, inicialización de Git y conexión con el repositorio remoto.
+
 Pasos para futuros proyectos github. 
 
 ** 1. Crear carpeta:
