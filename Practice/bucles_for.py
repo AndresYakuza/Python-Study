@@ -116,23 +116,80 @@ print('Numeros positivos: ', positivos)
 print('Numeros negativos: ', negativos)
 print('Suma de los positivos: ', total)
 
-# Contar cuántos números son pares e impares
+# ========= Contar cuántos números son pares e impares
 # Pide 10 números al usuario y al final muestra cuántos fueron pares y cuántos impares.
 
+
+pares = []
+impares = []
+
+for i in range(1, 11):
+    while True:
+        entrada = input(f'Digite el número {i}: ')
+        try:
+            user_number = int(entrada)
+            if user_number % 2 == 0:
+                pares.append(user_number)
+            else:
+                impares.append(user_number)
+            break
+        except ValueError:
+            print(f'Error, "{entrada}" no es un número válido...')
+
+print(f'\nCantidad de números pares: {len(pares)} ==== Números pares: {pares}')
+print(f'Cantidad de números impares: {len(impares)} ==== Números impares: {impares}')
+
 # 🔴 Ejercicios Difíciles
-# Número mayor y menor
+
+# ==== Número mayor y menor
 # Pide al usuario que ingrese 7 números y muestra cuál fue el mayor y el menor.
 
-# Pirámide de asteriscos
-# Pide al usuario un número de filas, y muestra una pirámide de asteriscos. Ejemplo con 4:
+numerostotales = []
 
-# markdown
-# Copiar
-# Editar
+for i in range(1, 8):
+    while True:
+        entrada = input(f'Digite el número {i}: ')
+        try:
+            user_number = int(entrada)
+            numerostotales.append(user_number)
+            break
+        except ValueError:
+            print(f'Error, "{entrada}" no es un número válido...')
+
+print(f'\nEl número mayor fue: {max(numerostotales)} ==== El números menor fue: {min(numerostotales)}')
+
+
+
+# ====== Pirámide de asteriscos
+# Pide al usuario un número de filas, y muestra una pirámide de asteriscos. Ejemplo con 4:
 # *
 # **
 # ***
 # ****
+
+
+try:
+    entrada = input('Ingresa un número de filas: ')
+
+    numerofilas = int(entrada)
+    numerofilas += 1
+
+    for i in range(1, numerofilas):
+        caracter = '*'
+        print(i * caracter)
+except ValueError:
+    print(f'Error, "{entrada}", no es un número valido...')
+
+#### Simple
+# try:
+#     numerofilas = int(input('Ingresa un número de filas: '))
+
+#     for i in range(1, numerofilas + 1):
+#         print('*' * i)
+
+# except ValueError:
+#     print('Error: el valor ingresado no es un número válido.')
+
 # Promedio de una lista de números
 # Pide al usuario 5 números y calcula el promedio.
 
