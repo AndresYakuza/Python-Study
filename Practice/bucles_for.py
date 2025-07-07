@@ -77,11 +77,44 @@ for i in range(1, 6):
             print("Por favor, ingresa un número válido.")
 print('Los numeros son: ', numbers)
 
-# Tabla de multiplicar
+# ====== Tabla de multiplicar
 # Pide al usuario un número y muestra su tabla de multiplicar del 1 al 10.
 
-# Sumar los positivos
+numero = int(input('Numero para multiplicar: '))
+
+for i in range(1, 11):
+    result = i * numero
+    print(f'{numero} x {i} = {result}')
+
+# ===== Sumar los positivos
 # Pide 6 números y suma solo los que sean mayores que cero.
+
+positivos = []
+numeros = []
+negativos = []
+total = 0
+
+for i in range(1, 7):
+    while True:
+        try:
+            user = int(input(f'Numero {i}: '))
+            numeros.append(user)
+
+            if user > 0:
+                total += user
+                positivos.append(user)
+            else:
+                negativos.append(user)
+            
+            break  # Salimos del while cuando el input es válido
+
+        except ValueError:
+            print('Valor no válido. Intenta de nuevo.')
+
+print('Numeros totales: ', numeros)
+print('Numeros positivos: ', positivos)
+print('Numeros negativos: ', negativos)
+print('Suma de los positivos: ', total)
 
 # Contar cuántos números son pares e impares
 # Pide 10 números al usuario y al final muestra cuántos fueron pares y cuántos impares.
