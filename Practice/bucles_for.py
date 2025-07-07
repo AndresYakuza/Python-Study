@@ -62,8 +62,20 @@ for i in range (1, 21):
 print('Numeros pares: ', pares)
 
 # 🟡 Ejercicios Normales
-# Pedir 5 números y mostrarlos
+
+# ======= Pedir 5 números y mostrarlos
 # Pide al usuario 5 números y guárdalos en una lista. Al final, muestra todos los números ingresados.
+
+numbers = []
+for i in range(1, 6):
+    while True:
+        try: 
+            numbers_user = int(input(f'Numero {i}: '))
+            numbers.append(numbers_user)
+            break #Se coloca el break, para salir del bucle del while una vez ingresado un numero valido.
+        except ValueError:
+            print("Por favor, ingresa un número válido.")
+print('Los numeros son: ', numbers)
 
 # Tabla de multiplicar
 # Pide al usuario un número y muestra su tabla de multiplicar del 1 al 10.
