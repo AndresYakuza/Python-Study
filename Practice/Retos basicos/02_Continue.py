@@ -21,3 +21,5 @@ for letter in user_word:
         continue
 
 print(letter)
+
+
