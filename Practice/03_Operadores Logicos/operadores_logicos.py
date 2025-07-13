@@ -1,4 +1,5 @@
 # 🧠 Nivel Básico
+
 # Par o mayor de edad
 # Escribe un programa que pregunte al usuario su edad y un número.
 # Imprime True si es mayor de edad o si el número es par.
@@ -39,6 +40,7 @@ else:
     print('Negativo')
 
 # ⚙️ Nivel Intermedio
+
 # Validar entrada múltiple
 # Pregunta al usuario su edad y si tiene licencia (s o n).
 # Imprime si puede manejar: edad ≥ 18 y licencia == "s"
@@ -94,24 +96,118 @@ else:
 # Imprime "Fuera de rango" si no está entre 100 y 200, ambos inclusive.
 # Usa el operador not o una negación lógica.
 
+numero = int(input('Digite un número: '))
+
+if numero not in range(100, 201):
+    print('Fuera de rango')
+else: 
+    print('En rango')
+
 # 🧪 Nivel Avanzado
+
 # Sistema de acceso condicional
 # Verifica si un usuario puede acceder a una zona restringida:
-
 # Es administrador o tiene un pase de seguridad y su acceso no está suspendido.
 # Usa variables como es_admin, tiene_pase, suspendido.
+
+es_admin = False
+tiene_pase = True
+suspendido = False
+
+# condicionales
+if es_admin == True:
+    print('Acceso concedido')
+else:
+    if tiene_pase == True:
+        if suspendido == True:
+            print('Acceso concedido')
+        else:
+            print('Acceso denegado')
+    else:
+        print('Acceso denegado')
+
+# Mio 
+if es_admin == True or (tiene_pase == True and suspendido == False):
+    print('Acceso concedido')
+else:
+    print('Acceso denegado')
+
+# Limpio 
+if es_admin or (tiene_pase and not suspendido):
+    print('Acceso concedido')
+else:
+    print('Acceso denegado')
 
 # Juego de lógica
 # Tienes tres valores booleanos: a, b, c.
 # Imprime True si exactamente dos de ellos son True.
 
+a = True
+b = False
+c = False
+
+if (a and b and not c) or (a and c and not b) or (b and c and not a):
+    print(True)
+else:
+    print(False)
+
 # 🎮 Sistema de puntos para premio
 # Un usuario puede reclamar un premio si cumple con al menos dos de las siguientes condiciones:
-
 # Tiene más de 1000 puntos
-
 # Es cliente VIP
-
 # Hace más de 1 año que está registrado
-
 # Usa variables como: puntos, es_vip, años_registrado y operadores lógicos para verificar si cumple 2 o más condiciones.
+
+
+# es_vip = int(input('Eres vip: (1) Si (2) No'))
+# años_registrado = int(input('Digite el numero de años registrado, si solo lleva meses digite 0: '))
+
+while True:
+    try:
+        puntos = int(input('Digite la cantidad de puntos que tiene: '))
+
+        if puntos >= 1000:
+            puntos = True
+        else:
+            puntos = False
+
+        # puntos = puntos >= 1000 Lo mismo y mas limpio
+
+
+        while True:
+
+            es_vip = int(input('Eres cliente VIP? Digite (1) SI (2) NO: '))
+
+            if es_vip not in [1, 2]:
+                print('El valor ingresado es diferente a los solicitados')
+                continue
+            else:
+                if es_vip == 1:
+                    es_vip = True
+                else:
+                    es_vip = False
+
+
+            años_registrado = int(input('Digite la cantidad de años registrad@ (Menos de 1 año equivale a 0): '))
+
+            if años_registrado >= 1:
+                años_registrado = True
+            else:
+                años_registrado = False
+
+            if (es_vip and años_registrado and not puntos) or (años_registrado and puntos and not es_vip) or (es_vip and puntos and not años_registrado):
+                print('¡Felicidades! Puedes reclamar el premio :D')
+            else:
+                print('¡Lo sentimos! Pero no puedes reclamar el premio :(')
+
+            # total_requisitos = puntos + es_vip + años_registrado
+            # # if total_requisitos >= 2:
+            # #     print('¡Felicidades! Puedes reclamar el premio :D')
+            # # else:
+            # #     print('¡Lo sentimos! Pero no puedes reclamar el premio :(') # Lo mismo y mas limpio
+            break
+        break
+    except ValueError:
+        print('=========================================')
+        print('¡UPS!, Valor no valido, vamos de nuevo...')
+        print('=========================================')
