@@ -9,15 +9,30 @@
 # ### 1. Crear y mostrar
 # Crea una lista con los nombres de tus 3 comidas favoritas e imprímela.
 
+comidas = ['Pastas con cerdo', 'Pastas con queso', 'Pastas con pollo']
+print(f'Mis comidas favoritas son: {comidas}')
+
 # ---
 
 # ### 2. Reemplazar un elemento
 # Crea una lista de 5 colores. Luego reemplaza el segundo color por otro que tú elijas.
 
+colores = ['Red', 'Blue', 'Yellow', 'Rose', 'White']
+print(f'Colores originales: {colores}')
+colores[1] = 'Black'
+print(f'Colores originales: {colores}')
+
 # ---
 
 # ### 3. Agregar elementos
 # Crea una lista vacía y pide al usuario 3 números que se irán agregando con `append()`.
+
+numeros = []
+
+for i in range(1, 4):
+    number = int(input(f'Digite el número {i}: '))
+    numeros.append(number)
+print(numeros)
 
 # ---
 
@@ -27,8 +42,11 @@
 # ```python
 # nombres = ["Ana", "Luis", "Carlos", "Marta"]
 # ```
-
 # Elimina el nombre `"Luis"` usando `remove()` y muestra la nueva lista.
+
+nombres = ["Ana", "Luis", "Carlos", "Marta"]
+nombres.remove('Luis')
+print(nombres)
 
 # ---
 
@@ -36,6 +54,17 @@
 
 # ### 5. Promedio de notas
 # Pide al usuario 4 notas, guárdalas en una lista y luego calcula el promedio.
+
+notas = []
+
+for i in range(1, 5):
+
+    user_notes = float(input(f'Digite la nota número {i}: '))
+    notas.append(user_notes)
+
+longitud = len(notas)
+print(f'Notas: {notas}')
+print(f'Promedio: {sum(notas)/longitud}')
 
 # ---
 
