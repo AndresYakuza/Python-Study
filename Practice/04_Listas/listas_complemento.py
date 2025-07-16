@@ -124,8 +124,41 @@ print(sublistas_crecientes)
 # datos = [1, 1, 2, 2, 2, 3, 1, 1, 4]
 # # Resultado esperado: [1, 2, 3, 1, 4]
 
+datos = [1, 2, 1, 1, 3]
+resultado = []
+
+for i in datos:
+    if i not in resultado:
+        resultado.append(i)
+    elif i != resultado[-1]:
+        resultado.append(i)
+print(resultado)
+
+# Según gpt la primera version es erronea, aunque el resultado es el esperado, por algun motivo lo tomaba como erroneo al final lo hice entrar en razon, (hice entrar en razón a una IA xd). Aunque la version a continuación es mas limpia. 
+
+# datos = [1, 1, 2, 2, 2, 3, 1, 1, 4]
+# resultado = []
+
+# for i in datos:
+#     if not resultado or i != resultado[-1]:
+#         resultado.append(i)
+
+# print(resultado)
+
 
 # 🧮 10. Suma acumulativa
 # Transforma una lista en su forma acumulada.
 # valores = [1, 2, 3, 4]
 # # Resultado esperado: [1, 3, 6, 10]
+
+
+valores = [1, 2, 3, 4]
+resultado = []
+
+for i in valores:
+    if not resultado:
+        resultado.append(i)
+    else:
+        valor = resultado[-1] + i
+        resultado.append(valor)
+print(resultado)
