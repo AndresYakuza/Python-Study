@@ -1,6 +1,13 @@
 
 
-# 📏 4. Longitud de palabras
-# Dada una lista de palabras, crea una nueva lista con la longitud de cada palabra.
-# palabras = ['python', 'listas', 'practica']
-# # Resultado esperado: [6, 6, 8]
+# ♻️ 9. Eliminar elementos consecutivos duplicados
+# Dada una lista, elimina los elementos duplicados solo si son consecutivos.
+# datos = [1, 1, 2, 2, 2, 3, 1, 1, 4]
+# # Resultado esperado: [1, 2, 3, 1, 4]
+
+
+
+
+
+
+

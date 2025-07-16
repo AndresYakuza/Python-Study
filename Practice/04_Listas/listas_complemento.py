@@ -47,10 +47,28 @@ print(f'Resultado esperado: {len(valores_unicos)} (los únicos son: {valores_uni
 # palabras = ['python', 'listas', 'practica']
 # # Resultado esperado: [6, 6, 8]
 
+
+palabras = ['python', 'listas', 'practica']
+longitud = []
+
+for palabra in palabras:
+    longitud.append(len(palabra))
+print(longitud)
+
 # 🔢 5. Pares e impares separados
 # Dada una lista de números, separa los pares e impares en dos listas.
 # numeros = [1, 4, 7, 8, 2, 5, 10]
 # # pares = [4, 8, 2, 10], impares = [1, 7, 5]
+
+numeros = [1, 4, 7, 8, 2, 5, 10]
+pares = []
+impares = []
+for numero in numeros:
+    if numero % 2 == 0:
+        pares.append(numero)
+    else:
+        impares.append(numero)
+print(f'Pares = {pares}, impares = {impares}')
 
 
 # ↕️ 6. Rotar elementos
@@ -59,15 +77,46 @@ print(f'Resultado esperado: {len(valores_unicos)} (los únicos son: {valores_uni
 # # Resultado esperado: [40, 10, 20, 30]
 
 
+valores = [10, 20, 30, 40]
+valores = valores[-1:] + valores[:-1]
+print(valores)
+
+
 # 🔄 7. Intercambiar extremos
 # Intercambia el primer y último elemento de la lista.
 # lista = [1, 2, 3, 4, 5]
 # # Resultado esperado: [5, 2, 3, 4, 1]
 
+lista = [1, 2, 3, 4, 5]
+lista = lista[-1:] + lista[1:-1] + lista[:1]
+# lista[0], lista[-1] = lista[-1], lista[0] Otra opción. 
+print(lista)
+
 # 🧠 8. Sublistas crecientes
 # Encuentra todas las sublistas crecientes dentro de una lista.
 # lista = [1, 2, 1, 2, 3, 1]
 # # Resultado esperado (sublistas crecientes consecutivas): [[1, 2], [1, 2, 3]]
+
+
+lista = [1, 2, 1, 2, 3, 1]
+sublistas_crecientes = []
+sublista_actual = []
+
+for i in range(len(lista)):
+    if not sublista_actual:
+        sublista_actual.append(lista[i])
+    elif lista[i] > sublista_actual[-1]:
+        sublista_actual.append(lista[i])
+    else:
+        if len(sublista_actual) > 1:
+            sublistas_crecientes.append(sublista_actual)
+        sublista_actual = [lista[i]]
+
+# Verificamos al final por si la última sublista era creciente
+if len(sublista_actual) > 1:
+    sublistas_crecientes.append(sublista_actual)
+
+print(sublistas_crecientes) 
 
 
 # ♻️ 9. Eliminar elementos consecutivos duplicados
