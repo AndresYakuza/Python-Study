@@ -3,6 +3,15 @@
 # numeros = [4, 2, 4, 7, 2, 9, 1, 4, 7]
 # # Resultado esperado: [4, 2, 7, 9, 1]
 
+numeros = [4, 2, 4, 7, 2, 9, 1, 4, 7]
+new_numeros = []
+
+for unidad in numeros:
+    if unidad not in new_numeros:  # Si no está ya en la nueva lista
+        new_numeros.append(unidad)  # Lo agregamos
+
+print(new_numeros)  # [4, 2, 7, 9, 1]
+
 # 🔁 2. Aplanar una lista de listas
 # Convierte una lista anidada en una sola lista plana.
 # listas = [[1, 2], [3, 4], [5, 6]]
