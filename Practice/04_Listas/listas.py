@@ -38,10 +38,7 @@ print(numeros)
 
 # ### 4. Eliminar elementos
 # Dada la lista:
-
-# ```python
 # nombres = ["Ana", "Luis", "Carlos", "Marta"]
-# ```
 # Elimina el nombre `"Luis"` usando `remove()` y muestra la nueva lista.
 
 nombres = ["Ana", "Luis", "Carlos", "Marta"]
@@ -70,28 +67,34 @@ print(f'Promedio: {sum(notas)/longitud}')
 
 # ### 6. Contar ocurrencias
 # Dada la lista:
-
-# ```python
 # frutas = ["manzana", "pera", "manzana", "uva", "manzana"]
-# ```
-
 # Cuenta cuántas veces aparece `"manzana"` usando `.count()`.
+
+
+frutas = ["manzana", "pera", "manzana", "uva", "manzana"]
+print(frutas.count('manzana'))
 
 # ---
 
 # ### 7. Invertir la lista
 # Pide al usuario que ingrese 5 números y luego muestra la lista invertida.
 
+numeros = []
+for i in range(1, 6):
+    numeros_usuario = int(input(f'Digite 5 numeros, número {i}: '))
+    numeros.append(numeros_usuario)
+numeros.reverse()
+print(numeros)
+
 # ---
 
 # ### 8. Máximo y mínimo
 # Dada una lista de números:
-
-# ```python
 # [4, 7, 1, 3, 9, 2]
-# ```
-
 # Encuentra y muestra el valor **máximo** y **mínimo**.
+
+list = [4, 7, 1, 3, 9, 2]
+print(max(list), min(list))
 
 # ---
 
@@ -100,6 +103,10 @@ print(f'Promedio: {sum(notas)/longitud}')
 # ### 9. Borrar todos los elementos
 # Dada una lista cualquiera, vacíala completamente usando `.clear()`.
 
+lista = [4, 7, 1, 3, 9, 2]
+lista.clear()
+print(lista)
+
 # ---
 
 # ### 10. Adivina el número
@@ -107,14 +114,25 @@ print(f'Promedio: {sum(notas)/longitud}')
 # - Pide al usuario un número y dile si está o no en la lista.
 
 # Usa:
-
-# ```python
 # if numero in lista:
 #     print("¡Sí está!")
 # else:
 #     print("No está en la lista.")
-# ```
 
-# ---
+import random
+
+lista= []
+
+for i in range(0, 5):
+    numero = (random.randrange(10))
+    lista.append(numero)
+
+user_number = int(input('Digite el numero entre 1 y 10: '))
+
+print(lista)
+if user_number in lista:
+    print("¡Sí está!")
+else:
+    print("No está en la lista.")
 
 # 🧪 ¡Puedes mezclar varios conceptos para crear tus propios retos!
