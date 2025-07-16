@@ -134,7 +134,7 @@ for i in datos:
         resultado.append(i)
 print(resultado)
 
-# Según gpt la primera version es erronea, aunque el resultado es el esperado, por algun motivo lo tomaba como erroneo al final lo hice entrar en razon, (hice entrar en razón a una IA xd). Aunque la version a continuación es mas limpia. 
+# Según gpt la primera version es erronea, aunque el resultado es el esperado, por algun motivo lo tomaba como erroneo al final lo hice entrar en razon, (hice entrar en razón a una IA xd?). Aunque la version a continuación es mas limpia. 
 
 # datos = [1, 1, 2, 2, 2, 3, 1, 1, 4]
 # resultado = []
