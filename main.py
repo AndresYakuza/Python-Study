@@ -1,6 +1,6 @@
 
 
-# 🔁 2. Aplanar una lista de listas
-# Convierte una lista anidada en una sola lista plana.
-# listas = [[1, 2], [3, 4], [5, 6]]
-# # Resultado esperado: [1, 2, 3, 4, 5, 6]
+# 📏 4. Longitud de palabras
+# Dada una lista de palabras, crea una nueva lista con la longitud de cada palabra.
+# palabras = ['python', 'listas', 'practica']
+# # Resultado esperado: [6, 6, 8]

@@ -17,10 +17,30 @@ print(new_numeros)  # [4, 2, 7, 9, 1]
 # listas = [[1, 2], [3, 4], [5, 6]]
 # # Resultado esperado: [1, 2, 3, 4, 5, 6]
 
+
+listas = [[1, 2], [3, 4], [5, 6]]
+resultado = []
+
+for unidad in listas:
+    for unidad2 in unidad:
+        resultado.append(unidad2)
+
+print(resultado)
+
 # 📊 3. Contar elementos únicos
 # Dada una lista, cuenta cuántos elementos son únicos (es decir, que solo aparecen una vez).
 # datos = [1, 2, 2, 3, 4, 4, 5]
 # # Resultado esperado: 3 (los únicos son 1, 3, 5)
+
+datos = [1, 2, 2, 3, 4, 4, 5]
+valores_unicos = []
+
+
+for unidad in datos:
+    if datos.count(unidad) == 1: 
+        valores_unicos.append(unidad)
+
+print(f'Resultado esperado: {len(valores_unicos)} (los únicos son: {valores_unicos})')
 
 # 📏 4. Longitud de palabras
 # Dada una lista de palabras, crea una nueva lista con la longitud de cada palabra.
