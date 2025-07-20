@@ -77,3 +77,5 @@ print(frutas)  # ['naranja', 'kiwi', 'manzana', 'pera', 'manzana']
 - `find()` devuelve `-1` si no encuentra la subcadena.
 
 ---
+
+El método .items() en Python se utiliza con diccionarios (dict) y te devuelve una vista de pares clave-valor como tuplas.
