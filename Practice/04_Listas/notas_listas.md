@@ -153,3 +153,17 @@ Eliminar completamente la lista:
 del my_list
 print(my_list)  # ➜ Error: la variable ya no existe
 ```
+
+## 🔍 Operadores `in` y `not in`
+
+```python
+elem in lista     # Devuelve True si elem está en la lista
+elem not in lista # Devuelve True si elem NO está en la lista
+```
+
+✅ Ejemplo:
+```python
+my_list = [10, 20, 30]
+print(20 in my_list)     # ➜ True
+print(50 not in my_list) # ➜ True
+```
