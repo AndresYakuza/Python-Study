@@ -88,6 +88,68 @@ Salida:
 
 ---
 
-👨‍💻 ¡Practica creando tus propias listas y experimentando con sus elementos!
+## 🧠 Asignación de listas: alias vs copia
 
+Cuando haces una asignación como:
 
+```python
+list_1 = [1]
+list_2 = list_1
+```
+
+Ambas variables apuntan a la misma lista en memoria. Si modificas una, la otra también se ve afectada:
+
+```python
+list_1[0] = 2
+print(list_2)  # ➜ [2]
+```
+
+✅ Copiar el contenido (no la referencia)  
+Para crear una copia real, usa una rebanada completa:
+
+```python
+list_2 = list_1[:]
+```
+
+Así, modificar list_1 no afecta a list_2.
+
+## 🍰 Rebanadas (slicing) avanzadas
+
+```python
+my_list[start:end]
+```
+
+* Incluye start, excluye end.
+* Si start > end con paso positivo (+1), el resultado es una lista vacía.
+* Puedes usar índices negativos para contar desde el final.
+
+Ejemplos:
+
+```python
+my_list = [10, 8, 6, 4, 2]
+
+my_list[1:-1]      # ➜ [8, 6, 4]
+my_list[-1:1]      # ➜ []  (orden inválido con paso por defecto)
+my_list[-1:1:-1]   # ➜ [2, 4, 6]  (paso negativo: va hacia atrás)
+```
+
+## 🗑️ Eliminación con del usando rebanadas
+
+Eliminar una porción:
+
+```python
+del my_list[1:3]  # Elimina elementos en índices 1 y 2
+```
+
+Vaciar toda la lista (pero no eliminar la variable):
+
+```python
+del my_list[:]  # ➜ []
+```
+
+Eliminar completamente la lista:
+
+```python
+del my_list
+print(my_list)  # ➜ Error: la variable ya no existe
+```
