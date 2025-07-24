@@ -167,3 +167,104 @@ my_list = [10, 20, 30]
 print(20 in my_list)     # ➜ True
 print(50 not in my_list) # ➜ True
 ```
+
+
+# 🧠 Comprensión de listas (List Comprehension)
+
+Una **list comprehension** es una forma concisa y elegante de crear listas aplicando una expresión sobre un iterable (como `range`, otra lista, etc.), con posibilidad de filtrar.
+
+## 📌 Sintaxis básica
+
+```python
+[nueva_expresión for elemento in iterable if condición]
+```
+
+---
+
+## ✅ Ejemplos:
+
+```python
+[x**2 for x in range(5)]               # ➜ [0, 1, 4, 9, 16]
+[x for x in range(10) if x % 2 == 0]   # ➜ solo pares
+[x.upper() for x in nombres]          # ➜ nombres en mayúscula
+```
+
+---
+
+## 🧠 Regla de oro
+
+### ✔️ `if` al **final** (sin `else`):
+Sirve para **filtrar** elementos (los que no cumplen, se eliminan).
+```python
+[x for x in lista if x > 0]
+```
+
+### ✔️ `if...else` al **inicio**:
+Sirve para **transformar cada elemento** según una condición (todos los elementos se mantienen, cambia su valor).
+```python
+["par" if x % 2 == 0 else "impar" for x in range(5)]
+```
+
+---
+
+### ⚠️ Importante:
+- No se puede usar `else` sin `if`.
+- No puedes mezclar `if` final con `else` al inicio.
+
+---
+
+# 📐 Comprensión de listas anidadas (Matrices)
+
+Una **matriz** es una lista que contiene otras listas. Ejemplo: un tablero 3x3:
+
+```python
+matriz = [[1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9]]
+```
+
+---
+
+## ✅ Crear una matriz con comprensión anidada:
+
+```python
+# Matriz de 3x3 con valores del 1 al 9
+matriz = [[i + j*3 for i in range(1, 4)] for j in range(3)]
+```
+
+---
+
+## 🔁 Recorrer una matriz:
+
+```python
+for fila in matriz:
+    for elemento in fila:
+        print(elemento)
+```
+
+---
+
+## 🎯 Ejemplo: matriz con valores pares o None
+
+```python
+matriz_pares = [
+    [x if x % 2 == 0 else None for x in fila]
+    for fila in matriz
+]
+```
+
+---
+
+## 🧊 Matrices más grandes (ejemplo práctico):
+
+```python
+# Temperaturas: 31 días, 24 horas por día
+temps = [[0.0 for h in range(24)] for d in range(31)]
+```
+
+Puedes acceder a:
+- Día 5, hora 12: `temps[4][11]`
+
+---
+
+
