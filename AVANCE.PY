@@ -18,3 +18,4 @@
 # Diccionarios por comprensión	{k: v for ...} para construir diccionarios dinámicos.
 # Funciones (def)	Encapsular tu lógica para reutilizarla.
 # Módulos útiles (random, math)	Para extender tus scripts con cosas prácticas.
+# dominar operadores bit a bit
