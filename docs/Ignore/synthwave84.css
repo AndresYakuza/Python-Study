@@ -121,7 +121,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("https://raw.githubusercontent.com/AndresYakuza/Python-Study/main/docs/Ignore/VsCode.png");
+  background-image: url("https://raw.githubusercontent.com/AndresYakuza/Python-Study/refs/heads/main/docs/Ignore/VsCode_base64.txt");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
