@@ -114,18 +114,4 @@
   filter: drop-shadow(0 0 5px #03edf9);
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://raw.githubusercontent.com/AndresYakuza/Python-Study/refs/heads/main/docs/Ignore/VsCode_base64.txt");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.06;
-  z-index: -1;
-  pointer-events: none;
-}
+
