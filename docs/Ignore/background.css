@@ -1,0 +1,15 @@
+body::before {
+  content: "";
+  background-image: url("https://github.com/AndresYakuza/Python-Study/blob/eb3bc6ff1d51576be99944ba23f52f0b20a6030a/docs/Ignore/VsCode.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
