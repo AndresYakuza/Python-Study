@@ -14,12 +14,12 @@ Las funciones permiten:
 
 ## 🔹 Tipos de funciones en Python
 
-| Tipo                         | Descripción                                                                 | Ejemplo                         |
-|------------------------------|-----------------------------------------------------------------------------|---------------------------------|
-| Funciones integradas         | Vienen con Python (`print()`, `len()`, `sum()`, etc.)                      | `print("Hola")`                |
-| Funciones de módulos         | Vienen en bibliotecas preinstaladas o externas (se verá más adelante)      | `math.sqrt(16)`                |
-| Funciones definidas por el usuario | Son creadas por ti o por otros programadores                            | `def saludar():` ...           |
-| Funciones lambda             | Funciones anónimas para operaciones simples (se verá más adelante)          | `lambda x: x+1`                |
+| Tipo                               | Descripción                                                                 | Ejemplo                         |
+|------------------------------------|-----------------------------------------------------------------------------|---------------------------------|
+| Funciones integradas               | Vienen con Python (`print()`, `len()`, `sum()`, etc.)                       | `print("Hola")`                |
+| Funciones de módulos               | Vienen en bibliotecas preinstaladas o externas (se verá más adelante)       | `math.sqrt(16)`                |
+| Funciones definidas por el usuario | Son creadas por ti o por otros programadores                                | `def saludar():` ...           |
+| Funciones lambda                   | Funciones anónimas para operaciones simples (se verá más adelante)          | `lambda x: x+1`                |
 
 ---
 

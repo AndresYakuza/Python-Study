@@ -1,0 +1,17 @@
+<h1>Items</h1>
+
+<form [formGroup]="f" (ngSubmit)="save()">
+  <input formControlName="name" placeholder="Nombre del item" />
+  <button type="submit" [disabled]="f.invalid">{{ editingId() ? 'Actualizar' : 'Agregar' }}</button>
+  <button type="button" (click)="cancel()" *ngIf="editingId()">Cancelar</button>
+</form>
+
+<p *ngIf="error()" style="color:crimson">{{ error() }}</p>
+
+<ul>
+  <li *ngFor="let it of items(); trackBy: trackById">
+    {{ it.name }}
+    <button (click)="edit(it)">✏️</button>
+    <button (click)="remove(it)">🗑️</button>
+  </li>
+</ul>
